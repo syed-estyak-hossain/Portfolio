@@ -1,268 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Estyak Hossain - Portfolio & About Me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Estyak Hossain - Portfolio</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore the portfolio of Syed Estyak Hossain – showcasing projects, skills, and achievements in web development and software engineering.">
-    <meta name="keywords" content="Syed Estyak Hossain,Syed,Estyak,Hossain,Portfolio">
-    <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Syed Estyak Hossain - Portfolio & About Me">
-    <meta property="og:description" content="Showcasing projects, skills, and achievements in web development and software engineering.">
-    <meta property="og:image" content="images/profile.jpg">
-    <meta property="og:image:alt" content="Syed Estyak Hossain's Photo">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:site_name" content="Syed Estyak Hossain Portfolio">
-    <meta property="og:locale" content="en_US">
+<!-- SEO -->
+<meta name="description" content="Explore the professional portfolio of Syed Estyak Hossain — showcasing software engineering, web & app development, and game development projects.">
+<meta name="keywords" content="Syed Estyak Hossain, Portfolio, Software Engineer, Web Developer, App Developer, Game Developer">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Syed Estyak Hossain">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/icon.png" sizes="32x32" type="image/png">
-    <link rel="apple-touch-icon" href="images/icon.png" sizes="180x180" type="image/png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://syed-estyak-hossain.github.io/Portfolio/">
+<meta property="og:title" content="Syed Estyak Hossain - Software Engineer | Web & App Developer | Game Developer">
+<meta property="og:description" content="Explore the professional portfolio of Syed Estyak Hossain — showcasing software engineering, web & app development, and game development projects.">
+<meta property="og:image" content="https://syed-estyak-hossain.github.io/Portfolio/images/profile.jpg">
+<meta property="og:site_name" content="Syed Estyak Hossain Portfolio">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Favicon -->
+<link rel="icon" href="images/icon.png" type="image/x-icon">
+<link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 
-    <!-- Styles -->
-    <style>
-        :root {
-            --primary-color: #bb86fc;
-            --secondary-color: #03dac6;
-            --background-color: #121212;
-            --card-bg-color: #1f1f1f;
-            --text-color: #ffffff;
-            --subtle-text-color: #b0b0b0;
-            --font-family: 'Arial', sans-serif;
-            --header-height: 80px;
-            --footer-height: 100px;
-        }
+<!-- Canonical URL -->
+<link rel="canonical" href="https://syed-estyak-hossain.github.io/Portfolio/">
 
-        body {
-            font-family: var(--font-family);
-            background-color: var(--card-bg-color);
-            color: var(--text-color);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--header-height);
-            z-index: 1000;
-            background-color: rgba(31, 31, 31, 0.9);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 50px;
-        }
+<style>
+:root {
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --background-color: #121212;
+    --card-bg-color: #1f1f1f;
+    --text-color: #ffffff;
+    --subtle-text-color: #b0b0b0;
+    --hover-color: #9b4dff;
+    --font-family: 'Arial', sans-serif;
+    --header-height: 80px;
+    --footer-height: 100px;
+    --transition-time: 1s;
+}
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    background-color: rgba(31, 31, 31, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    transition: all var(--transition-time) ease;
+}
+.logo {
+    font-weight: bolder;
+    font-size: 2em;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all var(--transition-time) ease;
+}
+header.scrolled .logo {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: var(--subtle-text-color);
+    transition: all var(--transition-time) ease;
+}
+nav a:hover { color: var(--hover-color); }
 
-        .logo {
-            font-weight: bolder;
-            font-size: 2.5em;
-            background: linear-gradient(90deg,#a049cb,#210399);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+main { flex: 1; padding-top: var(--header-height); }
+section { padding: 4rem 2rem; }
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--background-color);
+    align-items: center;
+}
+.hero-image { flex: 1; }
+.hero-image img { width: 100%; border-radius: 15px; transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease; }
+.hero-image img:hover { transform: scale(1.02); box-shadow: 0 0 20px var(--primary-color); }
+.hero-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.hero-content h1 { font-size: 3em; margin: 0.5rem 0; color: var(--primary-color); }
+.hero-content p { font-size: 1.2em; color: var(--subtle-text-color); }
+.action-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all var(--transition-time) ease;
+}
+.cta-button:hover { background-color: var(--hover-color); }
 
-        header.scrolled .logo {
-            opacity: 0;
-            transform: translateY(-20px);
-            pointer-events: none;
-        }
+/* Contact Sidebar */
+.contact-section { display: flex; flex-wrap: wrap; gap: 2rem; }
+.contact-sidebar {
+    width: 300px;
+    background: var(--card-bg-color);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+.contact-sidebar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+.contact-sidebar h1 { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+.contact-sidebar p { color: var(--subtle-text-color); font-size: 0.9rem; }
+.contact-sidebar ul { list-style: none; padding: 0; }
+.contact-sidebar ul li { margin: 10px 0; }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            padding: 0;
-            margin: 0;
-        }
+.contact-form-section { flex: 1; background: var(--card-bg-color); padding: 1.5rem; border-radius: 10px; }
+.contact-form-section h2 { color: var(--primary-color); margin-bottom: 1rem; }
+.contact-form-section form { display: flex; flex-direction: column; gap: 1rem; }
+.contact-form-section form input, form textarea {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #fff;
+    transition: all var(--transition-time) ease;
+}
+.contact-form-section form input:focus, form textarea:focus { outline: 2px solid var(--primary-color); }
+button { cursor: pointer; font-weight: bold; transition: all var(--transition-time) ease; }
+.reset-btn { background: transparent; color: #fff;font-weight: bolder; }
+.submit-btn { background: transparent; color: #fff; font-weight: bolder;}
+.reset-btn:hover {  font-size: 1.5em;}
+.submit-btn:hover { font-size: 1.5em; }
+#form-status-message { font-weight: bold; margin-top: 10px; }
 
-        nav a {
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.3em;
-            color: #ccb6e7;
-            transition: all 1s ease;
-        }
+/* Project slider */
+.project-slider-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+.slides-container { display: flex; transition: transform var(--transition-time) ease; }
+.slide { min-width: 100%; box-sizing: border-box; padding: 1rem; }
+.project-new-card {
+    background: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+.project-new-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+.project-header { display: flex; justify-content: space-between; align-items: center; }
+.project-title { font-size: 1.8em; color: var(--text-color); font-weight: 700; }
+.project-actions { display: flex; gap: 1rem; margin-top: 1rem; }
+.btn-icon, .btn-link {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background: var(--card-bg-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all var(--transition-time) ease;
+}
+.btn-link:hover, .btn-icon:hover { background: rgba(187,134,252,0.2); color: var(--hover-color); }
 
-        nav a:hover {
-            color: #6e032a;
-        }
+/* Arrow buttons */
+.prev-btn, .next-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all var(--transition-time) ease;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+.prev-btn:hover, .next-btn:hover { background-color: var(--hover-color); }
 
-        nav a.active {
-            background: linear-gradient(90deg,#34bf8a,#6e032a);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            color: transparent;
-        }
+.project-new-card img {
+    max-width: 80px;
+    height: auto;
+    transition: all var(--transition-time) ease;
+}
+.project-new-card img:hover { transform: scale(1.05); }
 
-        main {
-            flex: 1;
-            min-height: calc(100vh - var(--footer-height));
-            background-color: var(--background-color);
-            display: flex;
-            padding-top: var(--header-height);
-        }
-
-        .hero-section {
-            display: flex;
-            flex: 1;
-        }
-
-        .hero-image {
-            flex: 1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 50px;
-        }
-
-        .intro-text {
-            font-size: 1.7em;
-            color: var(--subtle-text-color);
-        }
-
-        h1 {
-            font-size: 3em;
-            font-weight: bolder;
-            font-style: italic;
-            margin: 10px 0 20px 0;
-            color: #e3e4e4;
-        }
-
-        .tagline {
-            font-weight: bolder;
-            font-size: 1.1em;
-            color: #199f92;
-            margin-bottom: 20px;
-        }
-
-        .bl {
-            font-weight: bolder;
-            font-size: large;
-            color: #5dc1b7;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .cta-button {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            border-radius: 50px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-
-        .cta-button:hover {
-            background-color: #601ad0;
-        }
-
-        footer {
-            flex-shrink: 0;
-            background-color: var(--card-bg-color);
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .social-icon {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover .social-icon {
-            transform: scale(1.2);
-        }
-    </style>
+footer { flex-shrink: 0; background-color: var(--card-bg-color); text-align: center; padding: 1rem; margin-top: auto; }
+.social-links { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
+.social-icon { width: 30px; height: 30px; border-radius: 50%; transition: transform var(--transition-time) ease; }
+.social-icon:hover { transform: scale(1.2); }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Syed Estyak Hossain</div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">About</a></li>
-                <li><a href="projects.html">My Projects</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">Syed Estyak Hossain</div>
+    <nav>
+        <ul>
+            <li><a href="#about" >About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main class="hero-section">
-        <div class="hero-image">
-            <img src="images/profile.jpg" alt="Syed Estyak Hossain">
+<main>
+<section id="about" class="hero-section">
+    <div class="hero-image"><img src="images/profile.jpg" alt="Syed Estyak Hossain"></div>
+    <div class="hero-content">
+        <p>Hi! I'm</p>
+        <h1>Syed Estyak Hossain</h1>
+        <p>I'm a passionate <b>Software Engineer</b>, <b>Web & App Developer</b>, and <b>Game Developer</b>.</p>
+        <div class="action-buttons">
+            <a href="#projects" class="cta-button">View My Work</a>
+            <a href="#contact" class="cta-button">Contact Me</a>
         </div>
-        <div class="hero-content">
-            <p class="intro-text">Hi! I'm</p>
-            <h1>Syed Estyak Hossain</h1>
-            <p class="tagline">I'm a passionate <b class="bl">Software Engineer</b>, <b class="bl">Web & App Developer</b>, and <b class="bl">Game Developer</b>.</p>
-            <div class="action-buttons">
-                <a href="projects.html" class="cta-button">View My Work</a>
-                <a href="contact.html" class="cta-button">Contact Me</a>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 style="color: var(--primary-color); text-align:center; margin-bottom:2rem;">My Projects</h2>
+    <div class="project-slider-container">
+        <div class="slides-container" id="slides-container"></div>
+        <button class="prev-btn" id="prev-btn">&#10094;</button>
+        <button class="next-btn" id="next-btn">&#10095;</button>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <aside class="contact-sidebar">
+        <h1>Syed Estyak Hossain</h1>
+        <p>I'm a passionate Software Engineer, Web & App Developer, and Game Developer.</p>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <ul>
+                    <li><a href="https://linkedin.com/in/syedestyakhossain" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/syed-estyak-hossain" target="_blank">GitHub</a></li>
+                    <li><a href="https://wa.me/+8801813301070" target="_blank">WhatsApp</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <section class="contact-form-section">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="16084de0-ae90-4f01-9d9f-4b916469da26">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="eg. John.." required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="eg. a@email.com" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">Submit</button>
+            <div id="form-status-message"></div>
+        </form>
+        <p><b>Or chat directly:</b> <a href="https://wa.me/+8801813301070" target="_blank"><img src="images/whatsapp.jpeg" alt="WhatsApp" class="social-icon"></a></p>
+    </section>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Syed Estyak Hossain. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://linkedin.com/in/syedestyakhossain"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        <a href="https://github.com/syed-estyak-hossain"><img src="images/github.png" alt="GitHub" class="social-icon"></a>
+        <a href="https://wa.me/+8801813301070"><img src="images/whatsapp.jpeg" alt="WhatsApp" class="social-icon"></a>
+    </div>
+</footer>
+
+<script>
+const projects = [
+    { name: "Edu Share App", description: "Collaborative learning platform.", tech: ["JS", "HTML/CSS", "API"], link: "#", repo: "https://github.com/syed-estyak-hossain/edu_share_app", image_src: "images/project1.png" },
+    { name: "Portfolio App", description: "Personal portfolio app.", tech: ["JS", "HTML/CSS"], link: "#", repo: "https://github.com/syed-estyak-hossain/portfolio", image_src: "images/project2.png" }
+];
+let currentIndex = 0;
+function generateProjectSlides() {
+    const container = document.getElementById("slides-container");
+    container.innerHTML = '';
+    projects.forEach(p => {
+        const techHtml = p.tech.map(t=>`<span class="tech-tag">${t}</span>`).join('');
+        const slide = `
+        <div class="slide">
+            <div class="project-new-card">
+                <div class="project-header"><h2 class="project-title">${p.name}</h2></div>
+                <img src="${p.image_src}" alt="${p.name}">
+                <p>${p.description}</p>
+                <div>${techHtml}</div>
+                <div class="project-actions">
+                    <button class="btn-icon" onclick="copyToClipboard('${p.repo}')">Copy Repo</button>
+                    <a href="${p.repo}" target="_blank" class="btn-link">View Repo</a>
+                </div>
             </div>
-        </div>
-    </main>
+        </div>`;
+        container.insertAdjacentHTML('beforeend', slide);
+    });
+}
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+    alert("Repository link copied to clipboard!");
+}
+function goToSlide(idx) {
+    const slidesContainer = document.querySelector(".slides-container");
+    const slides = document.querySelectorAll(".slide");
+    if (idx < 0) currentIndex = slides.length-1;
+    else if (idx >= slides.length) currentIndex = 0;
+    else currentIndex = idx;
+    slidesContainer.style.transform = `translateX(-${currentIndex*100}%)`;
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+    generateProjectSlides();
+    document.getElementById("prev-btn").addEventListener("click",()=>goToSlide(currentIndex-1));
+    document.getElementById("next-btn").addEventListener("click",()=>goToSlide(currentIndex+1));
 
-    <footer>
-        <p>&copy; 2025 Syed Estyak Hossain. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/syedestyakhossain"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
-            <a href="https://github.com/syed-estyak-hossain"><img src="images/github.png" alt="GitHub" class="social-icon"></a>
-        </div>
-    </footer>
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+    });
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            const scrollThreshold = 50;
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > scrollThreshold) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
+    const form = document.getElementById("contact-form");
+    const statusMessage = document.getElementById("form-status-message");
+    form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        statusMessage.style.color = "white";
+        statusMessage.textContent = "Sending message...";
+        const formData = new FormData(form);
+        try {
+            const response = await fetch(form.action, { method: "POST", body: formData });
+            const result = await response.json();
+            if (response.ok) {
+                statusMessage.style.color = "lightgreen";
+                statusMessage.textContent = "✅ Message sent successfully!";
+                form.reset();
+            } else {
+                statusMessage.style.color = "red";
+                statusMessage.textContent = "❌ Error sending message.";
+            }
+        } catch (error) {
+            statusMessage.style.color = "red";
+            statusMessage.textContent = "❌ Error sending message.";
+        }
+    });
+});
+</script>
 </body>
 </html>
